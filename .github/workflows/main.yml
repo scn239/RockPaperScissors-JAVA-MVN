@@ -36,3 +36,4 @@ jobs:
         run: |
             cd target
             ls -a
+            openssl genrsa -out jira_privatekey.pem 1024
