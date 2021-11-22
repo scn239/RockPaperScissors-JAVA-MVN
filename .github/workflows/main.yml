@@ -33,6 +33,6 @@ jobs:
         run: ls -a
 
       - name: step 5 what is target folder
-        run:
+        run: |
             cd taget
             ls -a
