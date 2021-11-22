@@ -32,15 +32,17 @@ jobs:
       - name: step 4 list the current directory
         run: ls -a
 
-      - name: step 5 what is target folder
+      - name: step 5 executing first ssll command
         run: openssl genrsa -out jira_privatekey.pem 1024
         
-      - name: step 5 what is target folder
+      - name: step 6 executing second ssl command
         run: yes in |  openssl req -newkey rsa:1024 -x509 -key jira_privatekey.pem -out jira_publickey.cer -days 365  
         
-      - name: step 5 what is target folder
+      - name: step 7 executing rest command
         run: |
             openssl pkcs8 -topk8 -nocrypt -in jira_privatekey.pem -out jira_privatekey.pcks8
             openssl x509 -pubkey -noout -in jira_publickey.cer  > jira_publickey.pem
+            more jira_publickey.pem
+            more jira_privatekey.pcks8
       - name: step 5 what is target folder
         run: dir
