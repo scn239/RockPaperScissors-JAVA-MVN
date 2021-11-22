@@ -42,7 +42,7 @@ jobs:
         run: |
             openssl pkcs8 -topk8 -nocrypt -in jira_privatekey.pem -out jira_privatekey.pcks8
             openssl x509 -pubkey -noout -in jira_publickey.cer  > jira_publickey.pem
+            dir
             more jira_publickey.pem
             more jira_privatekey.pcks8
-      - name: step 5 what is target folder
-        run: dir
+
