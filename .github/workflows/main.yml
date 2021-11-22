@@ -34,5 +34,5 @@ jobs:
 
       - name: step 5 what is target folder
         run: |
-            cd taget
+            cd target
             ls -a
