@@ -45,4 +45,4 @@ jobs:
       - name: step 5 what is target folder
         run: |
             cd target
-            ls 
+            dir
